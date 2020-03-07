@@ -1,16 +1,20 @@
 ---
-title: "GraphQL 의문점"
-date: 2020-03-07
-categories: 
-  - GraphQL
+title: "[TIL] 나만 몰랐던 intellij 테스트 방법들"
+date: 2020-03-08
+categories:
+  - TIL
 tags:
-  - GraphQL
-  - performance
+  - intellij
+  - quokka
+  - npm
 ---
 
-- Q1: graphQL은 여러 요청을 한 번에 하기 때문에 빠르다?
-    - connection 맺고 끊음에서 장점이 있다는 것은 알겠는데, 그게 실질적으로 빨라지나?
-- Q2: graphQL은 필요한 데이터만 받아올 수 있으므로 유연하다?
-    - `select * from table` 이 내부적으로 `select a, b from table` 처럼 되는 걸까?
-    - 아니면 하나의 REST 요청에 대해 Promise.all([fetchA, fetchB, fetchC]) 에서 fetchA만 되도록 하는게 가능한걸까?
-    - 다 받아 올 수 있으면 그냥 다 받아오는게 더 좋은게 아닐까? 다 받아오고 단지 filter시켜서 보기 깔끔하게 만들어주는 정도 뿐인 걸까?
+- intellij에서 npm script 디버깅하기
+  - so easy하다. configuration에 npm이 따로 있다! nodejs에서 괜히 해메었다. grunt, gulp도 다 있어서 설정을 별도로 할 필요가 없었다.
+  - 디버깅하면서 set value 등을 활용해서 입력값을 임의로 조작할 수 있음.03
+- JSTestDriver, Junit, jest 등 검색하다보며 얻은 키워드 들인데 정확한 용도와 사용법을 아직 모름. 추후에 정리해서 필요한 것은 사용할 수 있어야 하겠다.
+  - 간단한 method에도 테스트를 거는 방법을 숙지하고 테스트 해보는 습관을 들여야 할 것 같다. quokka 같은 playground도 좋지만 테스트 방법을 동영상 강의 등으로 익혀놓는게 좋을 것 같다.
+- quokka
+  - community 버전을 사용하고 있는데 import가 된다!
+  - 파일을 별도로 디렉토리 내부에 위치하게 생성하니 import 후 run이 잘 된다.
+  - compare 기능은 꽤 유용하게 쓸 수 있을 것 같다.
