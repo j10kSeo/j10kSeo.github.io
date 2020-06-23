@@ -1,3 +1,12 @@
+---
+title: "GraphQL prisma 연동 detail"
+date: 2020-04-25
+categories:
+  - graphQL
+tags:
+  - graphQL
+  - prisma
+---
 
 
 - server2client
@@ -14,3 +23,12 @@
         - prisma-binding, graphql-cli (for fetching schema, .graphqlconfig)
     - 4466 접속 에러날 때
         - heroku credential이 갱신되었음. 자주 변경되는지, 룰을 살펴봐야 함.
+    
+    - binding
+        - prisma.query, mutation, exists
+
+- relation
+    - onDelete와 함께, relation이 있는 경우 해당 아이템이 있어 삭제가 안되는 경우가 있는데, 이를 규정한 방식대로 가능하게 해준다.
+    
+- query- prisma.query 에 opArgs에 where을 넣어 filter하는 방법 (OR[c1, c2])
+
